@@ -133,8 +133,7 @@ int main() {
 }
 ```
 ## Output:
-![image](https://github.com/user-attachments/assets/37a96214-6e57-4474-a569-00e3e858dbbd)
-
+![image](https://github.com/user-attachments/assets/13484b10-0a42-40a9-bcf6-3bfdcfde65d7)
 
 ## Result:
 The program for RSA encryption and decryption is executed successfully.
