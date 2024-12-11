@@ -58,8 +58,6 @@ long long mod_exp(long long base, long long exp, long long mod) {
     }
     return result;
 }
-
-// Function to calculate the modular inverse of e mod phi using the extended Euclidean algorithm
 int mod_inverse(int e, int phi) {
     int t = 0, newt = 1;
     int r = phi, newr = e;
@@ -78,22 +76,15 @@ int mod_inverse(int e, int phi) {
 }
 
 int main() {
-    // Step 1: Initialize prime numbers p and q (use larger primes for real-world applications)
     int p = 61;
     int q = 53;
-    
-    // Step 2: Compute n = p * q and phi = (p-1) * (q-1)
     int n = p * q;
     int phi = (p - 1) * (q - 1);
-
-    // Step 3: Choose an encryption key e such that 1 < e < phi and gcd(e, phi) = 1
-    int e = 17; // A commonly used public exponent
+    int e = 17; 
     if (gcd(e, phi) != 1) {
         printf("e and phi(n) are not coprime!\n");
         return -1;
     }
-
-    // Step 4: Compute the decryption key d, the modular inverse of e mod phi
     int d = mod_inverse(e, phi);
     if (d == -1) {
         printf("No modular inverse found for e!\n");
